@@ -1,0 +1,15 @@
+10/09/2024 04:08:24 ==> Connection between MySQL and Python is established.
+10/09/2024 04:09:20 ==> Cursor created to communicate with the MySQL using Python.
+10/09/2024 04:21:15 ==> Creating Database.
+10/09/2024 04:21:15 ==> Database created.
+10/09/2024 04:26:49 ==> Database 'db_meta_dsm_mysql' was successfully created.
+10/09/2024 04:26:49 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql', 'db_mysqladmin', 'db_world', 'global_super_store', 'information_schema', 'little_lemon', 'little_lemon_db', 'lucky_Shrub', 'mangata_gallo', 'mangata_jw_db', 'meta_db', 'mg_schema', 'mysql', 'performance_schema', 'sakila', 'sys']
+10/09/2024 04:30:05 ==> Database 'db_meta_dsm_mysql' is set for use.
+10/09/2024 04:35:20 ==> Table tbl_orders successfully created
+10/09/2024 04:39:02 ==> Inserting records into the tbl_orders table
+10/09/2024 05:03:49 ==> Table tbl_customers successfully created
+10/09/2024 05:04:12 ==> Table tbl_bookings successfully created
+10/09/2024 05:17:50 ==> Inserting records into the tbl_customers table
+10/09/2024 05:17:50 ==> Inserting records into the tbl_bookings table
+10/09/2024 05:57:01 ==> Table orders_tbl successfully created
+10/09/2024 06:01:16 ==> Inserting records into the orders_tbl table
