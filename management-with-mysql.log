@@ -1,107 +1,60 @@
-10/10/2024 03:00:42 ==> Creating connection pools
-10/10/2024 03:00:43 ==> The connection pool is created with a name: pool_b
-10/10/2024 03:00:43 ==> The pool size is: 4
-10/10/2024 03:00:43 ==> First connections established between MySQL and Python
-10/10/2024 03:00:43 ==> Creating first cursor object from the first connection
-10/10/2024 03:00:43 ==> First Cursor object created to communicate with MySQL using Python.
-10/10/2024 03:00:43 ==> Dropping Database if it already exists.
-10/10/2024 03:00:43 ==> Creating Database.
-10/10/2024 03:00:43 ==> Database created.
-10/10/2024 03:00:43 ==> Database 'db_meta_dsm_mysql' was successfully created.
-10/10/2024 03:00:43 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql']
-10/10/2024 03:00:43 ==> Database 'db_meta_dsm_mysql' is set for use.
-10/10/2024 03:00:43 ==> Table tbl_orders successfully created
-10/10/2024 03:00:43 ==> Inserting records into the tbl_orders table
-10/10/2024 03:00:43 ==> Executing the query: SELECT * FROM tbl_orders;
-10/10/2024 03:00:43 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost <= 250;
-10/10/2024 03:00:43 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost BETWEEN 50 and 750;
-10/10/2024 03:00:43 ==> Executing the query: SELECT * FROM tbl_orders WHERE ClientID = 'Cl3' AND Cost > 100;
-10/10/2024 03:00:43 ==> Executing the query: SELECT * FROM tbl_orders WHERE ProductID IN ('P1', 'P2') AND Quantity > 2;
-10/10/2024 03:00:43 ==> Table tbl_customers successfully created
-10/10/2024 03:00:43 ==> Table tbl_bookings successfully created
-10/10/2024 03:00:43 ==> Inserting records into the tbl_customers table
-10/10/2024 03:00:43 ==> Inserting records into the tbl_bookings table
-10/10/2024 03:00:44 ==> Executing the query: SELECT FullName, PhoneNumber, BookingDate, NumberOfGuests FROM tbl_customers
+10/10/2024 09:50:41 ==> Creating connection pools
+10/10/2024 09:50:41 ==> The connection pool is created with a name: pool_b
+10/10/2024 09:50:41 ==> The pool size is: 4
+10/10/2024 09:50:41 ==> First connections established between MySQL and Python
+10/10/2024 09:50:41 ==> Creating first cursor object from the first connection
+10/10/2024 09:50:41 ==> First Cursor object created to communicate with MySQL using Python.
+10/10/2024 09:50:41 ==> Dropping Database if it already exists.
+10/10/2024 09:50:41 ==> Creating Database.
+10/10/2024 09:50:41 ==> Database created.
+10/10/2024 09:50:41 ==> Database 'db_meta_dsm_mysql' was successfully created.
+10/10/2024 09:50:41 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql']
+10/10/2024 09:50:41 ==> Database 'db_meta_dsm_mysql' is set for use.
+10/10/2024 09:50:42 ==> Table tbl_orders successfully created
+10/10/2024 09:50:42 ==> Inserting records into the tbl_orders table
+10/10/2024 09:50:42 ==> Executing the query: SHOW COLUMNS FROM tbl_orders;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_orders;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost <= 250;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost BETWEEN 50 and 750;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_orders WHERE ClientID = 'Cl3' AND Cost > 100;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_orders WHERE ProductID IN ('P1', 'P2') AND Quantity > 2;
+10/10/2024 09:50:42 ==> Table tbl_customers successfully created
+10/10/2024 09:50:42 ==> Table tbl_bookings successfully created
+10/10/2024 09:50:42 ==> Table tbl_courses successfully created
+10/10/2024 09:50:42 ==> Inserting records into the tbl_customers table
+10/10/2024 09:50:42 ==> Inserting records into the tbl_bookings table
+10/10/2024 09:50:42 ==> Inserting records into the tbl_courses table
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_customers;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_bookings;
+10/10/2024 09:50:42 ==> Executing the query: SELECT * FROM tbl_courses;
+10/10/2024 09:50:42 ==> Executing the query: SELECT FullName, PhoneNumber, BookingDate, NumberOfGuests FROM tbl_customers
 INNER JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID;
-10/10/2024 03:00:44 ==> Executing the query: SELECT tbl_customers.CustomerID, BookingID FROM tbl_customers
+10/10/2024 09:50:42 ==> Executing the query: SELECT tbl_customers.CustomerID, BookingID FROM tbl_customers
 LEFT JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID;
-10/10/2024 03:00:44 ==> Table orders_tbl successfully created
-10/10/2024 03:00:44 ==> Inserting records into the orders_tbl table
-10/10/2024 03:00:44 ==> Executing the query: SELECT * FROM orders_tbl
-10/10/2024 03:00:44 ==> Executing the query: SELECT OrderDate FROM orders_tbl GROUP BY OrderDate
-10/10/2024 03:00:44 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY OrderDate
-10/10/2024 03:00:44 ==> Executing the query: SELECT Department, Sum(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY Department
-10/10/2024 03:00:44 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl WHERE OrderDate BETWEEN '2022-06-01' AND '2022-06-30' GROUP BY OrderDate
-10/10/2024 03:00:44 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:00:44 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:00:44 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:00:44 ==> NumExpr defaulting to 8 threads.
-10/10/2024 03:00:45 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
-10/10/2024 03:00:45 ==> Creating converter from 7 to 5
-10/10/2024 03:00:45 ==> Creating converter from 5 to 7
-10/10/2024 03:00:45 ==> Creating converter from 7 to 5
-10/10/2024 03:00:45 ==> Creating converter from 5 to 7
-10/10/2024 03:01:40 ==> Creating connection pools
-10/10/2024 03:01:40 ==> The connection pool is created with a name: pool_b
-10/10/2024 03:01:40 ==> The pool size is: 4
-10/10/2024 03:01:40 ==> First connections established between MySQL and Python
-10/10/2024 03:01:40 ==> Creating first cursor object from the first connection
-10/10/2024 03:01:40 ==> First Cursor object created to communicate with MySQL using Python.
-10/10/2024 03:01:40 ==> Dropping Database if it already exists.
-10/10/2024 03:01:40 ==> Creating Database.
-10/10/2024 03:01:40 ==> Database created.
-10/10/2024 03:01:40 ==> Database 'db_meta_dsm_mysql' was successfully created.
-10/10/2024 03:01:40 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql']
-10/10/2024 03:01:40 ==> Database 'db_meta_dsm_mysql' is set for use.
-10/10/2024 03:02:24 ==> Creating connection pools
-10/10/2024 03:02:24 ==> The connection pool is created with a name: pool_b
-10/10/2024 03:02:24 ==> The pool size is: 4
-10/10/2024 03:02:24 ==> First connections established between MySQL and Python
-10/10/2024 03:02:24 ==> Creating first cursor object from the first connection
-10/10/2024 03:02:24 ==> First Cursor object created to communicate with MySQL using Python.
-10/10/2024 03:02:24 ==> Dropping Database if it already exists.
-10/10/2024 03:02:24 ==> Creating Database.
-10/10/2024 03:02:24 ==> Database created.
-10/10/2024 03:02:24 ==> Database 'db_meta_dsm_mysql' was successfully created.
-10/10/2024 03:02:24 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql']
-10/10/2024 03:02:24 ==> Database 'db_meta_dsm_mysql' is set for use.
-10/10/2024 03:02:40 ==> Creating connection pools
-10/10/2024 03:02:40 ==> The connection pool is created with a name: pool_b
-10/10/2024 03:02:40 ==> The pool size is: 4
-10/10/2024 03:02:40 ==> First connections established between MySQL and Python
-10/10/2024 03:02:40 ==> Creating first cursor object from the first connection
-10/10/2024 03:02:40 ==> First Cursor object created to communicate with MySQL using Python.
-10/10/2024 03:02:40 ==> Dropping Database if it already exists.
-10/10/2024 03:02:40 ==> Creating Database.
-10/10/2024 03:02:40 ==> Database created.
-10/10/2024 03:02:40 ==> Database 'db_meta_dsm_mysql' was successfully created.
-10/10/2024 03:02:40 ==> ['CVD', 'LittleLemonDB', 'PC', 'STAFF_LOCATIONS', 'db_Exercise', 'db_hr', 'db_learner', 'db_little_lemon', 'db_meta', 'db_meta_dsm_mysql']
-10/10/2024 03:02:40 ==> Database 'db_meta_dsm_mysql' is set for use.
-10/10/2024 03:02:40 ==> Table tbl_orders successfully created
-10/10/2024 03:02:40 ==> Inserting records into the tbl_orders table
-10/10/2024 03:02:40 ==> Executing the query: SELECT * FROM tbl_orders;
-10/10/2024 03:02:40 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost <= 250;
-10/10/2024 03:02:40 ==> Executing the query: SELECT * FROM tbl_orders WHERE Cost BETWEEN 50 and 750;
-10/10/2024 03:02:40 ==> Executing the query: SELECT * FROM tbl_orders WHERE ClientID = 'Cl3' AND Cost > 100;
-10/10/2024 03:02:40 ==> Executing the query: SELECT * FROM tbl_orders WHERE ProductID IN ('P1', 'P2') AND Quantity > 2;
-10/10/2024 03:02:40 ==> Table tbl_customers successfully created
-10/10/2024 03:02:40 ==> Table tbl_bookings successfully created
-10/10/2024 03:02:40 ==> Inserting records into the tbl_customers table
-10/10/2024 03:02:41 ==> Inserting records into the tbl_bookings table
-10/10/2024 03:02:41 ==> Executing the query: SELECT FullName, PhoneNumber, BookingDate, NumberOfGuests FROM tbl_customers
-INNER JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID;
-10/10/2024 03:02:41 ==> Executing the query: SELECT tbl_customers.CustomerID, BookingID FROM tbl_customers
-LEFT JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID;
-10/10/2024 03:02:41 ==> Table orders_tbl successfully created
-10/10/2024 03:02:41 ==> Inserting records into the orders_tbl table
-10/10/2024 03:02:41 ==> Executing the query: SELECT * FROM orders_tbl
-10/10/2024 03:02:41 ==> Executing the query: SELECT OrderDate FROM orders_tbl GROUP BY OrderDate
-10/10/2024 03:02:41 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY OrderDate
-10/10/2024 03:02:41 ==> Executing the query: SELECT Department, Sum(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY Department
-10/10/2024 03:02:41 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl WHERE OrderDate BETWEEN '2022-06-01' AND '2022-06-30' GROUP BY OrderDate
-10/10/2024 03:02:41 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:02:41 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:02:41 ==> Executing the query: SELECT * FROM tbl_orders
-10/10/2024 03:09:41 ==> No such comm target registered: jupyter.widget.control
-10/10/2024 03:09:41 ==> No such comm: e1c55f3d-17c4-453c-acff-4c9073e3284a
-10/10/2024 03:09:41 ==> Current comms: []
+10/10/2024 09:50:42 ==> Table orders_tbl successfully created
+10/10/2024 09:50:42 ==> Inserting records into the orders_tbl table
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM orders_tbl;
+10/10/2024 09:50:43 ==> Executing the query: SELECT OrderDate FROM orders_tbl GROUP BY OrderDate
+10/10/2024 09:50:43 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY OrderDate
+10/10/2024 09:50:43 ==> Executing the query: SELECT Department, Sum(OrderQty) AS OrderQuantity FROM orders_tbl GROUP BY Department
+10/10/2024 09:50:43 ==> Executing the query: SELECT OrderDate, Count(OrderQty) AS OrderQuantity FROM orders_tbl WHERE OrderDate BETWEEN '2022-06-01' AND '2022-06-30' GROUP BY OrderDate
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM tbl_orders
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM tbl_orders;
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM tbl_orders;
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM tbl_bookings WHERE BookingDate BETWEEN '2021-11-11' AND '2021-11-13'
+10/10/2024 09:50:43 ==> Executing the query: SELECT FullName, BookingID, NumberOfGuests FROM tbl_customers
+INNER JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID WHERE BookingDate = '2021-11-11';
+10/10/2024 09:50:43 ==> Executing the query: SELECT BookingDate, COUNT(BookingDate) AS NumberOfBookings FROM tbl_bookings GROUP BY BookingDate
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM tbl_courses;
+10/10/2024 09:50:43 ==> Executing the query: SHOW COLUMNS FROM tbl_delivery_address
+10/10/2024 09:50:43 ==> Executing the query: SHOW COLUMNS FROM tbl_courses
+10/10/2024 09:50:43 ==> Executing the query: SELECT FullName FROM tbl_customers WHERE CustomerID = ANY (SELECT CustomerID FROM tbl_bookings WHERE BookingDate = '2021-11-11');
+10/10/2024 09:50:43 ==> Executing the query: SELECT * FROM BookingsView;
+10/10/2024 09:50:43 ==> Called the GetBookingsData procedure with parameters: ('2021-11-13', )
+10/10/2024 09:50:43 ==> Executing the query: SELECT CONCAT("ID: ", BookingID, ", Date: ", BookingDate, ", Number of guests: ", NumberOfGuests) AS 'Booking Details' FROM tbl_bookings;
+10/10/2024 09:50:43 ==> NumExpr defaulting to 8 threads.
+10/10/2024 09:50:44 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/10/2024 09:50:44 ==> Creating converter from 7 to 5
+10/10/2024 09:50:44 ==> Creating converter from 5 to 7
+10/10/2024 09:50:44 ==> Creating converter from 7 to 5
+10/10/2024 09:50:44 ==> Creating converter from 5 to 7
