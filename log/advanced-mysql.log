@@ -1,0 +1,26 @@
+10/12/2024 04:44:01 ==> Creating a connection between MySQL and Python
+10/12/2024 04:44:01 ==> Connection established between MySQL and Python
+10/12/2024 04:44:01 ==> Creating first cursor object from connection
+10/12/2024 04:44:01 ==> Cursor object created to communicate with MySQL using Python.
+10/12/2024 04:44:01 ==> Dropping Database if it already exists.
+10/12/2024 04:44:01 ==> Creating Database.
+10/12/2024 04:44:01 ==> Database created.
+10/12/2024 04:44:01 ==> Database 'db_meta_advanced_mysql' was successfully created.
+10/12/2024 04:44:01 ==> Database 'db_meta_advanced_mysql' set for use.
+10/12/2024 04:44:01 ==> tbl_orders table created.
+10/12/2024 04:44:01 ==> tbl_products table created.
+10/12/2024 04:44:02 ==> tbl_notifications table created.
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_orders;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT FindCost(5);
+10/12/2024 04:44:02 ==> Procedure GetDiscount called with value 5
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
