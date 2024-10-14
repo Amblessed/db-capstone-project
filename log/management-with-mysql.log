@@ -73,3 +73,33 @@ INNER JOIN tbl_bookings ON tbl_customers.CustomerID = tbl_bookings.CustomerID WH
 10/12/2024 04:30:09 ==> Creating converter from 5 to 7
 10/12/2024 04:30:09 ==> Creating converter from 7 to 5
 10/12/2024 04:30:09 ==> Creating converter from 5 to 7
+10/12/2024 06:11:30 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 06:11:30 ==> No such comm: 4d667b33-33f6-493e-9d3d-5717e1233590
+10/12/2024 06:11:30 ==> Current comms: []
+10/12/2024 12:35:37 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 12:35:37 ==> No such comm: dde5c97d-64b7-453f-8c53-e26b24b2abf4
+10/12/2024 12:35:37 ==> Current comms: []
+10/12/2024 05:40:18 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 05:40:18 ==> No such comm: 42607fe4-e10e-434f-823b-0e68bbdcf70f
+10/12/2024 05:40:18 ==> Current comms: []
+10/12/2024 06:30:21 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 06:30:21 ==> No such comm: 9358b5bd-da5a-4201-b999-d23a6f69e101
+10/12/2024 06:30:21 ==> Current comms: []
+10/12/2024 06:39:18 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 06:39:18 ==> No such comm: 58813475-aa0d-41e3-a9ba-e3b3c0a43211
+10/12/2024 06:39:18 ==> Current comms: []
+10/12/2024 08:05:41 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 08:05:41 ==> No such comm: 139f255d-7b87-4aa3-9de9-c68e4b34129d
+10/12/2024 08:05:41 ==> Current comms: []
+10/12/2024 11:43:52 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 11:43:52 ==> No such comm: aa7af3fd-230f-42a5-b08a-a16fd613976f
+10/12/2024 11:43:52 ==> Current comms: []
+10/13/2024 01:09:39 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 01:09:39 ==> No such comm: ee39d679-f1fe-4a2e-b5d3-8428744c9436
+10/13/2024 01:09:39 ==> Current comms: []
+10/13/2024 03:11:06 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 03:11:06 ==> No such comm: bb934bcf-612e-4a6e-82c2-f52765b947d2
+10/13/2024 03:11:06 ==> Current comms: []
+10/13/2024 03:50:55 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 03:50:55 ==> No such comm: 0d03da87-4a44-42c4-80bc-ee31f0ad9216
+10/13/2024 03:50:55 ==> Current comms: []

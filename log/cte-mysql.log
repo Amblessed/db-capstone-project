@@ -1,0 +1,75 @@
+10/14/2024 08:16:22 ==> Creating a connection between MySQL and Python
+10/14/2024 08:16:22 ==> Connection established between MySQL and Python
+10/14/2024 08:16:22 ==> Creating first cursor object from connection
+10/14/2024 08:16:22 ==> Cursor object created to communicate with MySQL using Python.
+10/14/2024 08:16:22 ==> Executing the query: SELECT * FROM tbl_customers;
+10/14/2024 08:16:22 ==> Executing the query: SELECT * FROM tbl_employees;
+10/14/2024 08:16:22 ==> Executing the query: SELECT * FROM tbl_orders;
+10/14/2024 08:16:22 ==> Executing the query: SELECT * FROM tbl_products;
+10/14/2024 08:16:22 ==> Executing the query: SELECT CustomerID, SUM(Sales) AS TotalSales FROM tbl_orders GROUP BY CustomerID
+10/14/2024 08:16:22 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+)
+
+SELECT c.CustomerID, c.FirstName, c.LastName, cts.TotalSales FROM tbl_customers AS c LEFT JOIN CTE_Total_Sales cts ON c.CustomerID = cts.CustomerID;
+
+10/14/2024 08:16:22 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT c.CustomerID, c.FirstName, c.LastName, cts.TotalSales FROM tbl_customers AS c 
+LEFT JOIN CTE_Total_Sales cts ON c.CustomerID = cts.CustomerID
+LEFT JOIN CTE_Last_Order AS clo ON c.CustomerID = clo.CustomerID;
+
+10/14/2024 08:16:22 ==> NumExpr defaulting to 8 threads.
+10/14/2024 08:16:23 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/14/2024 08:16:24 ==> Creating converter from 7 to 5
+10/14/2024 08:16:24 ==> Creating converter from 5 to 7
+10/14/2024 08:16:24 ==> Creating converter from 7 to 5
+10/14/2024 08:16:24 ==> Creating converter from 5 to 7
+10/14/2024 08:16:58 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT c.CustomerID, c.FirstName, c.LastName, cts.TotalSales, clo.last_Order FROM tbl_customers AS c 
+LEFT JOIN CTE_Total_Sales cts ON c.CustomerID = cts.CustomerID
+LEFT JOIN CTE_Last_Order AS clo ON c.CustomerID = clo.CustomerID;
+
+10/14/2024 08:23:46 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, last_Order FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+

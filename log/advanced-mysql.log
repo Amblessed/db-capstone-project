@@ -1,26 +1,86 @@
-10/12/2024 04:44:01 ==> Creating a connection between MySQL and Python
-10/12/2024 04:44:01 ==> Connection established between MySQL and Python
-10/12/2024 04:44:01 ==> Creating first cursor object from connection
-10/12/2024 04:44:01 ==> Cursor object created to communicate with MySQL using Python.
-10/12/2024 04:44:01 ==> Dropping Database if it already exists.
-10/12/2024 04:44:01 ==> Creating Database.
-10/12/2024 04:44:01 ==> Database created.
-10/12/2024 04:44:01 ==> Database 'db_meta_advanced_mysql' was successfully created.
-10/12/2024 04:44:01 ==> Database 'db_meta_advanced_mysql' set for use.
-10/12/2024 04:44:01 ==> tbl_orders table created.
-10/12/2024 04:44:01 ==> tbl_products table created.
-10/12/2024 04:44:02 ==> tbl_notifications table created.
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_orders;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT FindCost(5);
-10/12/2024 04:44:02 ==> Procedure GetDiscount called with value 5
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_products;
-10/12/2024 04:44:02 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:57 ==> Creating a connection between MySQL and Python
+10/12/2024 07:35:57 ==> Connection established between MySQL and Python
+10/12/2024 07:35:57 ==> Creating first cursor object from connection
+10/12/2024 07:35:57 ==> Cursor object created to communicate with MySQL using Python.
+10/12/2024 07:35:58 ==> Dropping Database if it already exists.
+10/12/2024 07:35:58 ==> Creating Database.
+10/12/2024 07:35:58 ==> Database created.
+10/12/2024 07:35:58 ==> Database 'db_meta_advanced_mysql' was successfully created.
+10/12/2024 07:35:58 ==> Database 'db_meta_advanced_mysql' set for use.
+10/12/2024 07:35:58 ==> tbl_orders table created.
+10/12/2024 07:35:58 ==> tbl_products table created.
+10/12/2024 07:35:58 ==> tbl_notifications table created.
+10/12/2024 07:35:58 ==> Executing the query: SELECT * FROM tbl_orders;
+10/12/2024 07:35:58 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:58 ==> Executing the query: SELECT FindCost(5);
+10/12/2024 07:35:58 ==> Procedure GetDiscount called with value 5
+10/12/2024 07:35:58 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:58 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_products;
+10/12/2024 07:35:59 ==> Executing the query: SELECT * FROM tbl_notifications;
+10/12/2024 07:35:59 ==> Table tbl_customers successfully created
+10/12/2024 07:35:59 ==> Inserting records into the tbl_customers table
+10/12/2024 07:35:59 ==> Table customers successfully created
+10/12/2024 07:35:59 ==> Inserting records into the tbl_customers table
+10/12/2024 07:35:59 ==> Executing the query: EXPLAIN SELECT * FROM tbl_customers;
+10/12/2024 07:35:59 ==> Executing the query: EXPLAIN SELECT * FROM tbl_customers WHERE FullName = 'Marcos Romero';
+10/12/2024 07:35:59 ==> Executing the query: EXPLAIN SELECT * FROM customers WHERE FullName = 'Marcos Romero';
+10/12/2024 07:35:59 ==> Executing the query: EXPLAIN SELECT * FROM tbl_customers WHERE FullName = 'Karl Pederson';
+10/12/2024 07:35:59 ==> Executing the query: EXPLAIN SELECT * FROM customers WHERE FullName = 'Karl Pederson';
+10/12/2024 07:36:00 ==> NumExpr defaulting to 8 threads.
+10/12/2024 07:36:01 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/12/2024 07:36:01 ==> Creating converter from 7 to 5
+10/12/2024 07:36:01 ==> Creating converter from 5 to 7
+10/12/2024 07:36:01 ==> Creating converter from 7 to 5
+10/12/2024 07:36:01 ==> Creating converter from 5 to 7
+10/12/2024 12:35:38 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 12:35:38 ==> No such comm: 0574a2f7-d555-4b7c-b17a-f16d2a38c8c8
+10/12/2024 12:35:38 ==> Current comms: []
+10/12/2024 05:40:18 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 05:40:18 ==> No such comm: 1989c015-f00c-47de-bc14-1b794fa9a8f2
+10/12/2024 05:40:18 ==> Current comms: []
+10/12/2024 06:30:19 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 06:30:19 ==> No such comm: c0bc25cc-c023-4064-ac2b-8b0761c65caa
+10/12/2024 06:30:19 ==> Current comms: []
+10/12/2024 06:39:18 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 06:39:18 ==> No such comm: b735279e-887d-4ffe-823c-c9a769ee6d16
+10/12/2024 06:39:18 ==> Current comms: []
+10/12/2024 08:05:41 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 08:05:41 ==> No such comm: 94c732a5-8e0f-48a7-b8fe-78c7bfbd6277
+10/12/2024 08:05:41 ==> Current comms: []
+10/12/2024 11:43:52 ==> No such comm target registered: jupyter.widget.control
+10/12/2024 11:43:52 ==> No such comm: 9ba31c1b-cc48-4128-8b31-98a56a84147a
+10/12/2024 11:43:52 ==> Current comms: []
+10/13/2024 03:11:06 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 03:11:06 ==> No such comm: 96a5d92c-b297-4587-90da-365b8924c239
+10/13/2024 03:11:06 ==> Current comms: []
+10/13/2024 03:50:55 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 03:50:55 ==> No such comm: a5de81cb-0d92-41f0-9bb3-958a7dde00f5
+10/13/2024 03:50:55 ==> Current comms: []
+10/13/2024 10:19:41 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 10:19:41 ==> No such comm: 8e94f0dc-ab3c-46cb-825c-5193dc15cb2b
+10/13/2024 10:19:41 ==> Current comms: []
+10/13/2024 12:35:13 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 12:35:13 ==> No such comm: 9e1f0f70-befd-4e22-88ec-4462a7e8d223
+10/13/2024 12:35:13 ==> Current comms: []
+10/13/2024 12:39:41 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 12:39:41 ==> No such comm: 36cda7df-f9ae-4ae9-bb5e-d81999414828
+10/13/2024 12:39:41 ==> Current comms: []
+10/13/2024 07:43:23 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 07:43:23 ==> No such comm: 53d8437f-e49a-4148-a667-176934f3fde4
+10/13/2024 07:43:23 ==> Current comms: []
+10/13/2024 08:27:02 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 08:27:02 ==> No such comm: ec87bd58-ab93-468b-a1d4-d38f1f457c98
+10/13/2024 08:27:02 ==> Current comms: []
+10/13/2024 10:12:42 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 10:12:42 ==> No such comm: 0fc8cdcb-578e-4846-ad67-27eae47bfbf1
+10/13/2024 10:12:42 ==> Current comms: []
+10/13/2024 11:04:18 ==> No such comm target registered: jupyter.widget.control
+10/13/2024 11:04:18 ==> No such comm: 425ea386-5120-4ae5-bb0d-676d02fa952a
+10/13/2024 11:04:18 ==> Current comms: []
