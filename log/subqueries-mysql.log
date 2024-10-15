@@ -1,0 +1,153 @@
+10/15/2024 02:35:55 ==> Creating a connection between MySQL and Python
+10/15/2024 02:35:55 ==> Connection established between MySQL and Python
+10/15/2024 02:35:55 ==> Creating first cursor object from connection
+10/15/2024 02:35:55 ==> Cursor object created to communicate with MySQL using Python.
+10/15/2024 02:35:55 ==> Dropping Database if it already exists.
+10/15/2024 02:35:55 ==> Creating Database.
+10/15/2024 02:35:55 ==> Database created.
+10/15/2024 02:35:55 ==> Database 'db_subqueries' was successfully created.
+10/15/2024 02:35:55 ==> Database 'db_subqueries' set for use.
+10/15/2024 02:35:56 ==> tbl_orders table created.
+10/15/2024 02:35:56 ==> tbl_products table created.
+10/15/2024 02:35:56 ==> tbl_customers table created.
+10/15/2024 02:35:56 ==> tbl_employees table created.
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_orders;
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_products;
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_customers;
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM (SELECT ProductID, Price, AVG(Price) OVER() AS AvgPrice FROM tbl_products) AS t WHERE Price > AvgPrice;
+10/15/2024 02:35:56 ==> Executing the query: SELECT *,
+RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM (SELECT CustomerID, SUM(Sales) AS TotalSales FROM tbl_orders GROUP BY CustomerID) AS TotalSalesTable;
+10/15/2024 02:35:56 ==> Executing the query: SELECT ProductID, Product, price, (SELECT COUNT(*) FROM tbl_orders) AS TotalNumberOfOrders FROM tbl_products;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 101) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 101;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 102) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 102;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 103) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 103;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 104) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 104;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 105) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 105;
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_orders;
+10/15/2024 02:35:56 ==> Executing the query: SELECT Product, price, (SELECT COUNT(*) FROM tbl_orders WHERE ProductID = 105) AS TotalNumberOfOrders FROM tbl_products WHERE ProductID = 105;
+10/15/2024 02:35:56 ==> Executing the query: SELECT CustomerID, COUNT(*) FROM tbl_orders GROUP BY CustomerID;
+10/15/2024 02:35:56 ==> Executing the query: SELECT tbl_customers.*, Orders.TotalOrders FROM tbl_customers
+LEFT JOIN (SELECT CustomerID, COUNT(*) AS TotalOrders FROM tbl_orders GROUP BY CustomerID) AS Orders
+ON tbl_customers.CustomerID = Orders.CustomerID;
+10/15/2024 02:35:56 ==> Executing the query: SELECT *, (SELECT AVG(Price) FROM tbl_products) AS AvgPrice FROM tbl_products WHERE Price > (SELECT AVG(Price) AS AvgPrice FROM tbl_products);
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_customers WHERE Country = 'Germany';
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_orders 
+WHERE CustomerID IN 
+(SELECT CustomerID FROM tbl_customers WHERE Country = 'Germany');
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_orders 
+WHERE CustomerID IN 
+(SELECT CustomerID FROM tbl_customers WHERE Country <> 'Germany');
+10/15/2024 02:35:56 ==> Executing the query: SELECT * FROM tbl_orders 
+WHERE CustomerID NOT IN 
+(SELECT CustomerID FROM tbl_customers WHERE Country = 'Germany');
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_employees;
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_employees 
+WHERE Gender = 'F' AND Salary > ANY(SELECT SALARY FROM tbl_employees WHERE Gender = 'M');
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_employees 
+WHERE Gender = 'F' AND Salary > ALL(SELECT SALARY FROM tbl_employees WHERE Gender = 'M');
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_customers;
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_orders;
+10/15/2024 02:35:57 ==> Executing the query: SELECT *, (SELECT Count(*) FROM tbl_orders WHERE tbl_orders.CustomerID = tbl_customers.CustomerID) AS TotalSales FROM tbl_customers;
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_orders WHERE EXISTS (SELECT 1 FROM tbl_customers WHERE tbl_customers.CustomerID = tbl_orders.CustomerID AND Country = 'Germany')
+10/15/2024 02:35:57 ==> Executing the query: SELECT OrderID, Sales, 
+CASE 
+WHEN Sales > 50 THEN 'High'
+WHEN Sales BETWEEN 21 AND 50 THEN 'Medium'
+ELSE 'Low'
+END AS Category
+FROM tbl_orders
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT Category, SUM(Sales) AS TotalSales FROM
+(SELECT OrderID, Sales,
+CASE 
+WHEN Sales > 50 THEN 'High'
+WHEN Sales BETWEEN 21 AND 50 THEN 'Medium'
+ELSE 'Low'
+END AS Category
+FROM tbl_orders) AS T
+GROUP BY Category
+ORDER BY TotalSales DESC;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM
+(SELECT *, 
+CASE 
+WHEN Gender = 'F' THEN 'Female'
+WHEN Gender = 'M' THEN 'Male'
+ELSE 'Other'
+END AS GenderFullText
+FROM tbl_employees) AS T;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM tbl_customers;
+10/15/2024 02:35:57 ==> Executing the query: SELECT DISTINCT Country FROM tbl_customers;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM
+(SELECT *, 
+CASE 
+WHEN Country = 'Germany' THEN 'DE'
+WHEN Country = 'USA' THEN 'US'
+ELSE 'Other'
+END AS CountryAbb
+FROM tbl_customers) AS T;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT * FROM
+(SELECT *, 
+CASE Gender
+WHEN 'F' THEN 'Female'
+WHEN 'M' THEN 'Male'
+ELSE 'Other'
+END AS GenderFullText
+FROM tbl_employees) AS T;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT *, AVG(Score) OVER() AS AverageScore FROM
+(SELECT *, 
+CASE 
+WHEN Country = 'Germany' THEN 'DE'
+WHEN Country = 'USA' THEN 'US'
+ELSE 'Other'
+END AS CountryAbb
+FROM tbl_customers) AS T;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT *,
+CASE 
+WHEN Score IS NULL THEN 0
+ELSE Score
+End ScoreClean,
+AVG(SCORE) OVER() AS AverageScore
+FROM tbl_customers;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT *,
+AVG(
+    CASE 
+        WHEN Score IS NULL THEN 0
+        ELSE Score
+    End) OVER() AverageScoreClean,
+AVG(SCORE) OVER() AS AverageScore
+FROM tbl_customers;
+
+10/15/2024 02:35:57 ==> Executing the query: SELECT OrderID, CustomerID, Sales FROM tbl_orders ORDER BY CustomerID
+10/15/2024 02:35:57 ==> Executing the query: SELECT OrderID, CustomerID, Sales,
+CASE 
+WHEN Sales > 30 THEN 1
+ELSE 0
+END AS SalesFlag
+FROM tbl_orders ORDER BY CustomerID
+10/15/2024 02:35:57 ==> Executing the query: SELECT CustomerID, 
+SUM(CASE 
+WHEN Sales > 30 THEN 1
+ELSE 0
+END) AS TotalOrders
+FROM tbl_orders GROUP BY CustomerID
+10/15/2024 02:35:57 ==> Executing the query: SELECT CustomerID, 
+SUM(CASE 
+WHEN Sales > 30 THEN 1
+ELSE 0
+END) AS TotalOrdersHigh,
+COUNT(*) As TotalOrders
+FROM tbl_orders GROUP BY CustomerID
+10/15/2024 02:35:57 ==> NumExpr defaulting to 8 threads.
+10/15/2024 02:35:58 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/15/2024 02:35:59 ==> Creating converter from 7 to 5
+10/15/2024 02:35:59 ==> Creating converter from 5 to 7
+10/15/2024 02:35:59 ==> Creating converter from 7 to 5
+10/15/2024 02:35:59 ==> Creating converter from 5 to 7

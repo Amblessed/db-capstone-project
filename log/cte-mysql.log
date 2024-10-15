@@ -73,3 +73,425 @@ SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, last_Order FRO
 LEFT JOIN CTE_Total_Sales USING(CustomerID)
 LEFT JOIN CTE_Last_Order USING(CustomerID);
 
+10/14/2024 12:41:07 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 12:41:07 ==> No such comm: 7e6a8b4e-8059-4e01-8ade-5045497f418c
+10/14/2024 12:41:07 ==> Current comms: []
+10/14/2024 01:42:23 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 01:42:23 ==> No such comm: 02e065ae-ddb5-4457-af50-03a3af4f1abd
+10/14/2024 01:42:23 ==> Current comms: []
+10/14/2024 01:45:41 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 01:45:41 ==> No such comm: 4d389e42-79ee-4de7-a3f7-1fce98e56b21
+10/14/2024 01:45:41 ==> Current comms: []
+10/14/2024 06:46:25 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 06:46:25 ==> No such comm: 7e2b0eda-f19d-4ae9-9d2b-5c47fc47995b
+10/14/2024 06:46:25 ==> Current comms: []
+10/14/2024 08:01:17 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 08:01:17 ==> No such comm: c83034eb-8680-4815-99f0-35fb09efd2b6
+10/14/2024 08:01:17 ==> Current comms: []
+10/14/2024 08:34:18 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 08:34:18 ==> No such comm: 1592adb8-e5b7-4c2e-86bb-619c5e5a2ecc
+10/14/2024 08:34:18 ==> Current comms: []
+10/14/2024 08:55:56 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+
+10/14/2024 09:08:20 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(PARTITION BY CustomerID) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+
+10/14/2024 09:08:45 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(PARTITION BY TotalSales) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+
+10/14/2024 09:09:17 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+
+10/14/2024 09:09:26 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID);
+
+10/14/2024 09:09:45 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+ORDER BY TotalSales;
+
+10/14/2024 09:09:53 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Rank_Order AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+GROUP BY CustomerID
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:11:44 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Rank_Order USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:12:12 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Customer_Rank USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:18:24 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Customer_Segments AS (
+SELECT CustomerID,
+CASE 
+WHEN TotalSales > 100 THEN 'High'
+WHEN TotalSales > 50 THEN 'Medium'
+ELSE 'Low'
+END CustomerSegments
+FROM CTE_Total_Sales
+), 
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Customer_Rank USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+LEFT JOIN CTE_Customer_Segments USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:18:49 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Customer_Segments AS (
+SELECT CustomerID,
+CASE 
+WHEN TotalSales > 100 THEN 'High'
+WHEN TotalSales > 50 THEN 'Medium'
+ELSE 'Low'
+END CustomerSegments
+FROM CTE_Total_Sales
+), 
+
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank, CustomerSegments FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Customer_Rank USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+LEFT JOIN CTE_Customer_Segments USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:21:12 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+-- Step 2: Find the last order date for each customer (Standalone CTE)
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+),
+
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Customer_Segments AS (
+SELECT CustomerID,
+CASE 
+WHEN TotalSales > 100 THEN 'High'
+WHEN TotalSales > 50 THEN 'Medium'
+ELSE 'Low'
+END CustomerSegments
+FROM CTE_Total_Sales
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank, CustomerSegments FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Customer_Rank USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+LEFT JOIN CTE_Customer_Segments USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:21:55 ==> Executing the query: WITH CTE_Total_Sales AS 
+(
+SELECT CustomerID, SUM(Sales) AS TotalSales 
+FROM tbl_orders 
+GROUP BY CustomerID
+),
+
+-- Step 2: Find the last order date for each customer (Standalone CTE)
+CTE_Last_Order AS (
+SELECT CustomerID, MAX(OrderDate) AS Last_Order
+FROM tbl_orders
+GROUP BY CustomerID
+),
+
+-- Step 3: Rank Customers based on Total Sales Per Customer (Nested CTE)
+CTE_Customer_Rank AS (
+SELECT CustomerID, RANK() OVER(ORDER BY TotalSales DESC) AS CustomerRank
+FROM CTE_Total_Sales
+),
+
+CTE_Customer_Segments AS (
+SELECT CustomerID,
+CASE 
+WHEN TotalSales > 100 THEN 'High'
+WHEN TotalSales > 50 THEN 'Medium'
+ELSE 'Low'
+END CustomerSegments
+FROM CTE_Total_Sales
+)
+
+SELECT tbl_customers.CustomerID, FirstName, LastName, TotalSales, Last_Order, CustomerRank, CustomerSegments FROM tbl_customers  
+LEFT JOIN CTE_Total_Sales USING(CustomerID)
+LEFT JOIN CTE_Customer_Rank USING(CustomerID)
+LEFT JOIN CTE_Last_Order USING(CustomerID)
+LEFT JOIN CTE_Customer_Segments USING(CustomerID)
+ORDER BY TotalSales DESC;
+
+10/14/2024 09:35:09 ==> Executing the query: SELECT 1 AS MyNumber
+10/14/2024 09:36:01 ==> Executing the query:  WITH Series AS
+(SELECT 1 AS MyNumber)
+
+SELECT * FROM Series
+
+10/14/2024 09:38:29 ==> Executing the query:  WITH Series AS
+(SELECT 1 AS MyNumber
+UNION ALL
+SELECT MyNumber + 1 
+FROM Series
+WHERE MyNumber < 20
+)
+
+
+10/14/2024 09:39:10 ==> Executing the query:  WITH Series AS
+(
+SELECT 1 AS MyNumber
+UNION ALL
+SELECT MyNumber + 1 
+FROM Series
+WHERE MyNumber < 20
+)
+SELECT * FROM Series
+
+10/14/2024 09:40:38 ==> Executing the query: WITH Series AS
+(
+SELECT 1 AS MyNumber
+UNION ALL
+SELECT MyNumber + 1 
+FROM Series
+WHERE MyNumber < 20
+)
+-- Main Query
+SELECT * FROM Series
+
+10/14/2024 09:46:54 ==> Executing the query: WITH Series AS
+(
+SELECT 1 AS MyNumber
+UNION ALL
+SELECT MyNumber + 1 
+FROM Series
+WHERE MyNumber < 20
+)
+-- Main Query
+SELECT * FROM Series
+
+10/14/2024 11:04:12 ==> No such comm target registered: jupyter.widget.control
+10/14/2024 11:04:12 ==> No such comm: b49c20fe-99c3-4ec5-bb00-f2f98575dfd2
+10/14/2024 11:04:12 ==> Current comms: []
