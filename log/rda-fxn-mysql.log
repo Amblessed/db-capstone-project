@@ -1,0 +1,49 @@
+10/18/2024 05:54:41 ==> Creating a connection between MySQL and Python
+10/18/2024 05:54:41 ==> Connection established between MySQL and Python
+10/18/2024 05:54:42 ==> Creating cursor object from the connection
+10/18/2024 05:54:42 ==> Cursor object created to communicate with MySQL using Python.
+10/18/2024 05:54:52 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:55:01 ==> Executing the query: SHOW TABLES;
+10/18/2024 05:55:04 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:55:13 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:56:33 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:56:43 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:56:49 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:56:56 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:02 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:06 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:15 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:24 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:28 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:32 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:42 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:45 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:47 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:50 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:55 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:57:58 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:04 ==> Executing the query: SHOW ENGINES;
+10/18/2024 05:58:07 ==> Executing the query: SELECT TABLE_NAME, ENGINE FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'billdata';
+10/18/2024 05:58:39 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:42 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:45 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:47 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:50 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:53 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:58:55 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:13 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:18 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:22 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:24 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:27 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:29 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:33 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:36 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:45 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 05:59:48 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:21 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:43 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:47 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:50 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:53 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/18/2024 06:00:55 ==> Executing the query: select * from billdata where billedamount > 19999;

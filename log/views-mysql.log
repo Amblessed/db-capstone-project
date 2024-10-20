@@ -252,3 +252,15 @@ LEFT JOIN tbl_employees e ON e.EmployeeID = o.SalesPersonID);
 10/15/2024 05:12:06 ==> No such comm target registered: jupyter.widget.control
 10/15/2024 05:12:06 ==> No such comm: 4eb7b73d-93f6-449d-bfe3-6d5bd719604c
 10/15/2024 05:12:06 ==> Current comms: []
+10/15/2024 07:44:13 ==> Executing the query: SELECT * FROM db_Exercise.Bookings;
+10/15/2024 07:45:27 ==> Executing the query: SHOW TABLES FROM db_Exercise;
+10/15/2024 07:58:11 ==> Executing the query: SHOW databases;
+10/15/2024 08:09:16 ==> No such comm target registered: jupyter.widget.control
+10/15/2024 08:09:16 ==> No such comm: 563101c7-15c1-415b-8abd-f7eb0f2f930f
+10/15/2024 08:09:16 ==> Current comms: []
+10/15/2024 05:09:20 ==> No such comm target registered: jupyter.widget.control
+10/15/2024 05:09:20 ==> No such comm: 09c95334-8b43-4cee-a05c-7f4016aced02
+10/15/2024 05:09:20 ==> Current comms: []
+10/15/2024 07:56:05 ==> No such comm target registered: jupyter.widget.control
+10/15/2024 07:56:05 ==> No such comm: b3425735-f218-4702-8a62-21190e638a11
+10/15/2024 07:56:05 ==> Current comms: []

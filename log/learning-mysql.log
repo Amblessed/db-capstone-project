@@ -1,0 +1,39 @@
+10/16/2024 03:50:06 ==> Creating a connection between MySQL and Python
+10/16/2024 03:50:06 ==> Connection established between MySQL and Python
+10/16/2024 03:50:06 ==> Creating cursor object from the connection
+10/16/2024 03:50:06 ==> Cursor object created to communicate with MySQL using Python.
+10/16/2024 03:50:06 ==> Executing the query: SELECT VERSION() AS Version;
+10/16/2024 03:50:06 ==> Executing the query: SHOW DATABASES;
+10/16/2024 03:50:06 ==> Executing the query: SELECT COUNT(*) FROM user;
+10/16/2024 03:50:06 ==> Executing the query: SELECT Host, User, plugin, authentication_string FROM user;
+10/16/2024 03:50:07 ==> Executing the query: SELECT * FROM tbl_artist;
+10/16/2024 03:50:07 ==> Executing the query: SELECT * FROM tbl_album;
+10/16/2024 03:50:07 ==> Executing the query: SELECT * FROM tbl_track;
+10/16/2024 03:50:07 ==> Executing the query: SELECT * FROM tbl_played;
+10/16/2024 03:50:07 ==> NumExpr defaulting to 8 threads.
+10/16/2024 03:50:08 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/16/2024 03:50:08 ==> Creating converter from 7 to 5
+10/16/2024 03:50:08 ==> Creating converter from 5 to 7
+10/16/2024 03:50:08 ==> Creating converter from 7 to 5
+10/16/2024 03:50:08 ==> Creating converter from 5 to 7
+10/16/2024 12:33:25 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 12:33:25 ==> No such comm: b5437146-269b-4b10-b033-25c22dbcda51
+10/16/2024 12:33:25 ==> Current comms: []
+10/16/2024 01:13:31 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 01:13:31 ==> No such comm: c085b21d-92e1-4199-9d2b-516059f41bc6
+10/16/2024 01:13:31 ==> Current comms: []
+10/16/2024 08:44:28 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 08:44:28 ==> No such comm: 36f9fa2f-7967-4f38-a638-86981744a9cb
+10/16/2024 08:44:28 ==> Current comms: []
+10/16/2024 09:27:56 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:27:56 ==> No such comm: dc219734-5af3-4355-8557-70c124f6d2ce
+10/16/2024 09:27:56 ==> Current comms: []
+10/16/2024 09:50:29 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:50:29 ==> No such comm: dbb4cbe7-0be5-4906-89d1-31ae6304653c
+10/16/2024 09:50:29 ==> Current comms: []
+10/16/2024 09:56:14 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:56:14 ==> No such comm: bb1628a1-6719-4748-b58e-b8bb46e726c4
+10/16/2024 09:56:14 ==> Current comms: []
+10/16/2024 10:11:45 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 10:11:45 ==> No such comm: b735ba14-dd78-4ad4-adcb-57558c10ea8b
+10/16/2024 10:11:45 ==> Current comms: []

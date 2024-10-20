@@ -1,0 +1,165 @@
+10/16/2024 12:00:24 ==> Creating a connection between MySQL and Python
+10/16/2024 12:00:24 ==> Connection established between MySQL and Python
+10/16/2024 12:00:29 ==> Creating first cursor object from connection
+10/16/2024 12:00:29 ==> Cursor object created to communicate with MySQL using Python.
+10/16/2024 12:01:23 ==> Dropping Database if it already exists.
+10/16/2024 12:01:23 ==> Creating Database.
+10/16/2024 12:01:23 ==> Database created.
+10/16/2024 12:01:31 ==> Database 'db_aggregate_fxn' was successfully created.
+10/16/2024 12:01:31 ==> Database 'db_aggregate_fxn' set for use.
+10/16/2024 12:02:00 ==> tbl_orders table created.
+10/16/2024 12:02:01 ==> tbl_products table created.
+10/16/2024 12:02:01 ==> tbl_customers table created.
+10/16/2024 12:02:01 ==> tbl_employees table created.
+10/16/2024 12:02:50 ==> Executing the query: SELECT * FROM tbl_orders;
+10/16/2024 12:02:50 ==> Executing the query: SELECT * FROM tbl_products;
+10/16/2024 12:02:50 ==> Executing the query: SELECT * FROM tbl_customers;
+10/16/2024 12:02:50 ==> Executing the query: SELECT * FROM tbl_employees;
+10/16/2024 12:04:55 ==> Executing the query: SELECT * FROM tbl_orders;
+10/16/2024 12:04:55 ==> Executing the query: SELECT * FROM tbl_products;
+10/16/2024 12:04:55 ==> Executing the query: SELECT * FROM tbl_customers;
+10/16/2024 12:04:55 ==> Executing the query: SELECT * FROM tbl_employees;
+10/16/2024 12:05:12 ==> Executing the query: SELECT * FROM tbl_orders;
+10/16/2024 12:05:12 ==> Executing the query: SELECT * FROM tbl_products;
+10/16/2024 12:05:12 ==> Executing the query: SELECT * FROM tbl_customers;
+10/16/2024 12:05:12 ==> Executing the query: SELECT * FROM tbl_employees;
+10/16/2024 12:07:05 ==> Executing the query: SELECT SUM(Sales) AS TotalSales;
+10/16/2024 12:07:17 ==> Executing the query: SELECT SUM(Sales) AS TotalSales FROM tbl_orders;
+10/16/2024 12:13:37 ==> Executing the query: SELECT *, SUM(sales) FROM tble_orders GROUP BY productid;
+10/16/2024 12:13:46 ==> Executing the query: SELECT *, SUM(sales) FROM tbl_orders GROUP BY productid;
+10/16/2024 12:14:05 ==> Executing the query: SELECT productid, SUM(sales) FROM tbl_orders GROUP BY productid;
+10/16/2024 12:14:16 ==> Executing the query: SELECT productid, SUM(sales) AS TotalSales FROM tbl_orders GROUP BY productid;
+10/16/2024 12:17:27 ==> Executing the query: SELECT orderid, productid, SUM(Sales) AS TotalSales FROM tbl_orders;
+10/16/2024 12:18:00 ==> Executing the query: SELECT orderid, orderdate, productid, SUM(Sales) AS TotalSales FROM tbl_orders GROUP BY productid;
+10/16/2024 12:19:31 ==> Executing the query: SELECT SUM(Sales) AS TotalSales FROM tbl_orders;
+10/16/2024 12:19:42 ==> Executing the query: SELECT SUM(Sales) OVER() AS TotalSales FROM tbl_orders;
+10/16/2024 12:20:46 ==> Executing the query: SELECT SUM(Sales) OVER() AS TotalSales FROM tbl_orders;
+10/16/2024 12:21:35 ==> Executing the query: SELECT SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct FROM tbl_orders;
+10/16/2024 12:22:06 ==> Executing the query: SELECT orderid, orderdate, productid, SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct FROM tbl_orders;
+10/16/2024 12:40:57 ==> Executing the query: SELECT orderid, orderdate, productid, 
+SUM(sales) AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:41:16 ==> Executing the query: SELECT orderid, orderdate, productid, 
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:41:34 ==> Executing the query: SELECT orderid, orderdate, productid, sales
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:41:42 ==> Executing the query: SELECT orderid, orderdate, productid, sales,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:48:09 ==> Executing the query: SELECT orderid, orderdate, productid, sales,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:49:17 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+FROM tbl_orders;
+10/16/2024 12:49:55 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct 
+SUM(Sales) OVER(PARTITION BY orderstatus) AS TotalSalesByStatus 
+FROM tbl_orders;
+10/16/2024 12:50:04 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct, 
+SUM(Sales) OVER(PARTITION BY orderstatus) AS TotalSalesByStatus 
+FROM tbl_orders;
+10/16/2024 12:50:59 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct, 
+SUM(Sales) OVER(PARTITION BY orderstatus) AS TotalSalesByStatus, 
+SUM(Sales) OVER(PARTITION BY productid, orderstatus) AS TotalSalesByStatus 
+FROM tbl_orders;
+10/16/2024 12:51:50 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER() AS TotalSales,
+SUM(Sales) OVER(PARTITION BY productid) AS TotalSalesByProduct, 
+SUM(Sales) OVER(PARTITION BY productid, orderstatus) AS TotalSalesByStatus 
+FROM tbl_orders;
+10/16/2024 12:57:35 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(PARTITION BY productid, ORDER BY sales) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 12:58:19 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(ORDER BY sales DESC) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 12:59:23 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(PARTITION BY ProductID ORDER BY sales DESC) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 01:00:17 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(PARTITION BY ProductID ORDER BY sales DESC) AS RankSalesByProduct
+FROM tbl_orders WHERE productid = 101;
+10/16/2024 01:30:06 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 01:30:06 ==> No such comm: 1ce0547f-704e-4575-abe2-19e0e66b1214
+10/16/2024 01:30:06 ==> Current comms: []
+10/16/2024 01:32:54 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(PARTITION BY ProductID ORDER BY sales DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CUURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders WHERE productid = 101;
+10/16/2024 01:33:21 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+RANK() OVER(PARTITION BY ProductID ORDER BY sales DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders WHERE productid = 101;
+10/16/2024 01:33:54 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY ProductID ORDER BY sales DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders WHERE productid = 101;
+10/16/2024 01:34:01 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY ProductID ORDER BY sales DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 01:34:44 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY ProductID ORDER BY orderdate DESC ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 01:35:04 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY ProductID ORDER BY orderdate ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS RankSalesByProduct
+FROM tbl_orders;
+10/16/2024 01:37:42 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS TotalSales
+FROM tbl_orders;
+10/16/2024 01:39:06 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS TotalSales
+FROM tbl_orders WHERE orderstatus = 'Shipped';
+10/16/2024 01:42:46 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate) AS TotalSales
+FROM tbl_orders;
+10/16/2024 01:46:47 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate) AS TotalSales
+FROM tbl_orders
+WHERE SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate) > 100;
+10/16/2024 01:47:51 ==> Executing the query: SELECT orderid, orderdate, productid, sales, orderstatus,
+SUM(sales) OVER(PARTITION BY orderstatus ORDER BY orderdate) AS TotalSales
+FROM tbl_orders;
+10/16/2024 01:51:57 ==> Executing the query: SELECT customerid, 
+SUM(sales) AS TotalSales
+FROM tbl_orders;
+10/16/2024 01:52:08 ==> Executing the query: SELECT customerid, 
+SUM(sales) AS TotalSales
+FROM tbl_orders
+GROUP BY customerid;
+10/16/2024 01:53:33 ==> Executing the query: SELECT customerid, 
+SUM(sales) AS TotalSales,
+RANK() OVER (ORDER BY SUM(sales) DESC) AS RankCustomers
+FROM tbl_orders
+GROUP BY customerid;
+10/16/2024 12:33:24 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 12:33:24 ==> No such comm: 8c25f5ce-d4c5-4b26-984d-1c2e19460d5b
+10/16/2024 12:33:24 ==> Current comms: []
+10/16/2024 01:13:31 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 01:13:31 ==> No such comm: 0c20571a-9c44-4a16-89ce-bdf2379aef28
+10/16/2024 01:13:31 ==> Current comms: []
+10/16/2024 08:44:28 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 08:44:28 ==> No such comm: 3683805a-4402-43d3-b563-9b44a3413ad6
+10/16/2024 08:44:28 ==> Current comms: []
+10/16/2024 09:27:48 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:27:48 ==> No such comm: 5e1a89ce-6573-417e-af15-f332d022abda
+10/16/2024 09:27:48 ==> Current comms: []
+10/16/2024 09:50:28 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:50:28 ==> No such comm: f296c424-5249-4836-8214-413f2969a230
+10/16/2024 09:50:28 ==> Current comms: []
+10/16/2024 09:56:14 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 09:56:14 ==> No such comm: 179a2615-6e40-48fc-917a-c5f52182ee85
+10/16/2024 09:56:14 ==> Current comms: []
+10/16/2024 10:11:45 ==> No such comm target registered: jupyter.widget.control
+10/16/2024 10:11:45 ==> No such comm: 30990166-7282-4d1c-aa94-e36f87788c73
+10/16/2024 10:11:45 ==> Current comms: []
