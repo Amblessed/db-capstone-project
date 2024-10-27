@@ -1,0 +1,34 @@
+10/24/2024 12:23:25 ==> Creating a connection between MySQL and Python
+10/24/2024 12:23:25 ==> Connection established between MySQL and Python
+10/24/2024 12:23:25 ==> Creating first cursor object from connection
+10/24/2024 12:23:25 ==> Cursor object created to communicate with MySQL
+10/24/2024 12:23:26 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 12:23:26 ==> No such comm: 2f685f52-e252-4e39-995d-dc80fd31bbe2
+10/24/2024 12:23:26 ==> Current comms: []
+10/24/2024 12:23:26 ==> NumExpr defaulting to 8 threads.
+10/24/2024 12:23:27 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/24/2024 12:23:27 ==> Creating converter from 7 to 5
+10/24/2024 12:23:27 ==> Creating converter from 5 to 7
+10/24/2024 12:23:27 ==> Creating converter from 7 to 5
+10/24/2024 12:23:27 ==> Creating converter from 5 to 7
+10/24/2024 04:53:14 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 04:53:14 ==> No such comm: d3aa1d7e-034a-4ab5-b6cb-2d9a98640754
+10/24/2024 04:53:14 ==> Current comms: []
+10/24/2024 08:24:16 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 08:24:16 ==> No such comm: 83d92456-97b6-4ce6-ba61-61d6eb7e9dcd
+10/24/2024 08:24:16 ==> Current comms: []
+10/24/2024 12:40:44 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 12:40:44 ==> No such comm: 8cce5058-f6b9-41c2-a069-ba0df72eb9ae
+10/24/2024 12:40:44 ==> Current comms: []
+10/24/2024 02:02:36 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 02:02:36 ==> No such comm: 9d47a6d8-f7b7-417b-96d1-9d74be453bcb
+10/24/2024 02:02:36 ==> Current comms: []
+10/24/2024 04:42:40 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 04:42:41 ==> No such comm: fc79d5c4-4974-4097-ae03-cfad59284830
+10/24/2024 04:42:41 ==> Current comms: []
+10/24/2024 09:00:31 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 09:00:31 ==> No such comm: fb134a2f-3946-4582-b98e-dc05f72e0ff0
+10/24/2024 09:00:31 ==> Current comms: []
+10/25/2024 05:55:29 ==> No such comm target registered: jupyter.widget.control
+10/25/2024 05:55:29 ==> No such comm: 525579a2-0843-4126-8a83-3487f65623fc
+10/25/2024 05:55:29 ==> Current comms: []

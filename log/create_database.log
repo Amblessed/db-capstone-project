@@ -1,0 +1,13 @@
+10/27/2024 05:50:06 ==> Creating a connection between MySQL and Python
+10/27/2024 05:50:06 ==> Connection established between MySQL and Python
+10/27/2024 05:50:06 ==> Creating first cursor object from connection
+10/27/2024 05:50:06 ==> Cursor object created to communicate with MySQL
+10/27/2024 07:55:17 ==> No such comm target registered: jupyter.widget.control
+10/27/2024 07:55:17 ==> No such comm: d1cf3bdf-8c83-4dcb-a62d-1594183fbcdf
+10/27/2024 07:55:17 ==> Current comms: []
+10/27/2024 09:48:07 ==> No such comm target registered: jupyter.widget.control
+10/27/2024 09:48:07 ==> No such comm: a41ed2e4-05a2-423e-9d5c-8f37bf18f7a7
+10/27/2024 09:48:07 ==> Current comms: []
+10/27/2024 10:23:50 ==> No such comm target registered: jupyter.widget.control
+10/27/2024 10:23:50 ==> No such comm: 63e81606-ae19-43e7-96a4-8d344ca650e6
+10/27/2024 10:23:50 ==> Current comms: []

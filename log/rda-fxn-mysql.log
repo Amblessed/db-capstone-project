@@ -1,49 +1,54 @@
-10/18/2024 05:54:41 ==> Creating a connection between MySQL and Python
-10/18/2024 05:54:41 ==> Connection established between MySQL and Python
-10/18/2024 05:54:42 ==> Creating cursor object from the connection
-10/18/2024 05:54:42 ==> Cursor object created to communicate with MySQL using Python.
-10/18/2024 05:54:52 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:55:01 ==> Executing the query: SHOW TABLES;
-10/18/2024 05:55:04 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:55:13 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:56:33 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:56:43 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:56:49 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:56:56 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:02 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:06 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:15 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:24 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:28 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:32 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:42 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:45 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:47 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:50 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:55 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:57:58 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:04 ==> Executing the query: SHOW ENGINES;
-10/18/2024 05:58:07 ==> Executing the query: SELECT TABLE_NAME, ENGINE FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'billdata';
-10/18/2024 05:58:39 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:42 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:45 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:47 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:50 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:53 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:58:55 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:13 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:18 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:22 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:24 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:27 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:29 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:33 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:36 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:45 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 05:59:48 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:21 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:43 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:47 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:50 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:53 ==> Executing the query: select * from billdata where billedamount > 19999;
-10/18/2024 06:00:55 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/20/2024 05:16:08 ==> Creating a connection between MySQL and Python
+10/20/2024 05:16:08 ==> Connection established between MySQL and Python
+10/20/2024 05:16:08 ==> Creating cursor object from the connection
+10/20/2024 05:16:08 ==> Cursor object created to communicate with MySQL using Python.
+10/20/2024 05:16:08 ==> Executing the query: SHOW DATABASES;
+10/20/2024 05:16:08 ==> Executing the query: SELECT schema_name
+FROM information_schema.schemata;
+10/20/2024 05:16:08 ==> Executing the query: SHOW TABLES;
+10/20/2024 05:16:08 ==> Executing the query: select table_name, data_length + index_length from information_schema.tables where table_name = 'billdata';
+10/20/2024 05:16:08 ==> Executing the query: select table_name, (data_length + index_length)/1024 from information_schema.tables where table_name = 'billdata';
+10/20/2024 05:16:08 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/20/2024 05:16:11 ==> Executing the query: select * from billdata where billedamount > 19999;
+10/20/2024 05:16:11 ==> Executing the query: SHOW ENGINES;
+10/20/2024 05:16:11 ==> Executing the query: SELECT TABLE_NAME, ENGINE FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'billdata';
+10/20/2024 05:16:11 ==> Executing the query: SHOW TABLES;
+10/20/2024 05:16:11 ==> Executing the query: SELECT table_name, engine FROM INFORMATION_SCHEMA.TABLES WHERE table_schema = 'db_world';
+10/20/2024 05:16:11 ==> Executing the query: SELECT table_name, engine FROM tables WHERE table_schema = 'db_world';
+10/20/2024 05:16:11 ==> Executing the query: SHOW COLUMNS from columns;
+10/20/2024 05:16:11 ==> Executing the query: SELECT COLUMN_NAME FROM COLUMNS WHERE TABLE_NAME = 'country';
+10/20/2024 05:16:11 ==> Executing the query: SELECT DISTINCT TABLE_NAME FROM COLUMNS WHERE TABLE_SCHEMA = 'db_learner';
+10/20/2024 05:16:11 ==> Executing the query: SELECT DISTINCT TABLE_NAME FROM COLUMNS WHERE TABLE_SCHEMA = 'db_meta_advanced_mysql';
+10/20/2024 05:16:11 ==> Executing the query: SELECT table_name, (data_length + index_length)/1024 FROM INFORMATION_SCHEMA.TABLES 
+WHERE table_name = 'country' OR table_name = 'city' 
+OR table_name = 'countrylanguage' OR table_name = 'csv_test';
+10/20/2024 05:16:11 ==> NumExpr defaulting to 8 threads.
+10/20/2024 05:16:13 ==> Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+10/20/2024 05:16:13 ==> Creating converter from 7 to 5
+10/20/2024 05:16:13 ==> Creating converter from 5 to 7
+10/20/2024 05:16:13 ==> Creating converter from 7 to 5
+10/20/2024 05:16:13 ==> Creating converter from 5 to 7
+10/20/2024 08:12:03 ==> No such comm target registered: jupyter.widget.control
+10/20/2024 08:12:04 ==> No such comm: 0132613c-f186-4c1b-af4b-70cdd2fcbf2f
+10/20/2024 08:12:04 ==> Current comms: []
+10/20/2024 08:52:59 ==> No such comm target registered: jupyter.widget.control
+10/20/2024 08:52:59 ==> No such comm: 091e7813-632b-4119-9abc-fd774e3c0c78
+10/20/2024 08:52:59 ==> Current comms: []
+10/21/2024 10:03:39 ==> No such comm target registered: jupyter.widget.control
+10/21/2024 10:03:39 ==> No such comm: d28568c6-1f56-4443-879b-f7e2c6ca5c2d
+10/21/2024 10:03:39 ==> Current comms: []
+10/21/2024 12:54:27 ==> No such comm target registered: jupyter.widget.control
+10/21/2024 12:54:27 ==> No such comm: c83342b4-9114-4d6f-9949-9322fc58907e
+10/21/2024 12:54:27 ==> Current comms: []
+10/21/2024 12:58:25 ==> No such comm target registered: jupyter.widget.control
+10/21/2024 12:58:25 ==> No such comm: 184bb7aa-8038-4e85-8243-c156c7e5115b
+10/21/2024 12:58:25 ==> Current comms: []
+10/21/2024 03:02:07 ==> No such comm target registered: jupyter.widget.control
+10/21/2024 03:02:07 ==> No such comm: 59683ab3-fa29-427c-b196-ccee09d18608
+10/21/2024 03:02:07 ==> Current comms: []
+10/21/2024 03:17:42 ==> No such comm target registered: jupyter.widget.control
+10/21/2024 03:17:42 ==> No such comm: 3765b7ff-8a8a-4c10-83e3-a94e581b5681
+10/21/2024 03:17:42 ==> Current comms: []
+10/22/2024 01:49:22 ==> No such comm target registered: jupyter.widget.control
+10/22/2024 01:49:22 ==> No such comm: ca1fe2f3-d657-4970-85ba-8cdf728bff27
+10/22/2024 01:49:22 ==> Current comms: []

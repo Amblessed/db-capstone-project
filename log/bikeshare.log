@@ -1,0 +1,9 @@
+10/26/2024 03:09:02 ==> Creating a connection between MySQL and Python
+10/26/2024 03:09:02 ==> Connection established between MySQL and Python
+10/26/2024 03:09:02 ==> Creating first cursor object from connection
+10/26/2024 03:09:02 ==> Cursor object created to communicate with MySQL
+10/26/2024 03:09:02 ==> Dropping Database db_bikeshare if it already exists.
+10/26/2024 03:09:02 ==> Creating Database db_bikeshare.
+10/26/2024 03:09:02 ==> db_bikeshare Database created.
+10/26/2024 03:09:02 ==> Database 'db_bikeshare' was successfully created.
+10/26/2024 03:09:02 ==> Database 'db_bikeshare' set for use.

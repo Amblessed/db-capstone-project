@@ -1,14 +1,68 @@
-10/20/2024 11:23:40 ==> Creating a connection between MySQL and Python
-10/20/2024 11:23:40 ==> Connection established between MySQL and Python
-10/20/2024 11:23:40 ==> Creating first cursor object from connection
-10/20/2024 11:23:40 ==> Cursor object created to communicate with MySQL
-10/20/2024 11:23:40 ==> Dropping Database db_window_fxn if it already exists.
-10/20/2024 11:23:40 ==> Creating Database db_window_fxn.
-10/20/2024 11:23:40 ==> db_window_fxn Database created.
-10/20/2024 11:23:40 ==> Database 'db_window_fxn' was successfully created.
-10/20/2024 11:23:40 ==> Database 'db_window_fxn' set for use.
-10/20/2024 11:23:40 ==> tbl_orders table created.
-10/20/2024 11:23:40 ==> tbl_orders table created.
-10/20/2024 11:23:40 ==> tbl_products table created.
-10/20/2024 11:23:40 ==> tbl_customers table created.
-10/20/2024 11:23:41 ==> tbl_employees table created.
+10/23/2024 03:28:57 ==> Creating a connection between MySQL and Python
+10/23/2024 03:28:57 ==> Connection established between MySQL and Python
+10/23/2024 03:28:57 ==> Creating first cursor object from connection
+10/23/2024 03:28:57 ==> Cursor object created to communicate with MySQL
+10/23/2024 03:28:57 ==> Dropping Database db_advanced_sql_baraa if it already exists.
+10/23/2024 03:28:57 ==> Creating Database db_advanced_sql_baraa.
+10/23/2024 03:28:57 ==> db_advanced_sql_baraa Database created.
+10/23/2024 03:28:57 ==> Database 'db_advanced_sql_baraa' was successfully created.
+10/23/2024 03:28:57 ==> Database 'db_advanced_sql_baraa' set for use.
+10/23/2024 03:28:57 ==> tbl_orders table created.
+10/23/2024 03:28:57 ==> tbl_orders table created.
+10/23/2024 03:28:57 ==> tbl_products table created.
+10/23/2024 03:28:58 ==> tbl_customers table created.
+10/23/2024 03:28:58 ==> tbl_employees table created.
+10/23/2024 04:14:01 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 04:14:01 ==> No such comm: 74ad06ef-6ca2-4d8d-9510-39979f42894c
+10/23/2024 04:14:01 ==> Current comms: []
+10/23/2024 05:32:37 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 05:32:37 ==> No such comm: 8dfe6106-9223-4e32-9898-db64a15150bc
+10/23/2024 05:32:37 ==> Current comms: []
+10/23/2024 08:39:29 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 08:39:29 ==> No such comm: 03467a92-2d4a-4238-961e-0315d0ac03bb
+10/23/2024 08:39:29 ==> Current comms: []
+10/23/2024 12:01:33 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 12:01:33 ==> No such comm: e18d08c7-5d80-4b2f-aa76-4fdedbda6f66
+10/23/2024 12:01:33 ==> Current comms: []
+10/23/2024 12:39:13 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 12:39:13 ==> No such comm: 203f28a0-651f-4994-b1bd-8835a754339c
+10/23/2024 12:39:13 ==> Current comms: []
+10/23/2024 12:48:12 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 12:48:12 ==> No such comm: 30cfef6c-7f09-4965-8b04-447f672a933e
+10/23/2024 12:48:12 ==> Current comms: []
+10/23/2024 02:37:54 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 02:37:54 ==> No such comm: 84a16f36-4dfc-477d-87c5-326a1fa192dd
+10/23/2024 02:37:54 ==> Current comms: []
+10/23/2024 03:20:12 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 03:20:12 ==> No such comm: 683c7685-3966-48f2-adf6-cf32de8ce2cd
+10/23/2024 03:20:12 ==> Current comms: []
+10/23/2024 03:35:53 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 03:35:53 ==> No such comm: dd6d0e3d-317d-4d72-bdfa-bdba18897b1e
+10/23/2024 03:35:53 ==> Current comms: []
+10/23/2024 04:15:43 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 04:15:43 ==> No such comm: 9c6bbcf9-8d1c-46ef-aeef-32849746d2fd
+10/23/2024 04:15:43 ==> Current comms: []
+10/23/2024 05:16:58 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 05:16:58 ==> No such comm: 6335f43b-e53c-439b-bc13-f0f0f799211d
+10/23/2024 05:16:58 ==> Current comms: []
+10/23/2024 09:30:34 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 09:30:34 ==> No such comm: 605b9858-33fd-41d4-a983-c60ed5548c93
+10/23/2024 09:30:34 ==> Current comms: []
+10/23/2024 10:12:20 ==> No such comm target registered: jupyter.widget.control
+10/23/2024 10:12:20 ==> No such comm: 8b0d681d-8fbe-47bf-adf7-d6123645365e
+10/23/2024 10:12:20 ==> Current comms: []
+10/24/2024 08:27:17 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 08:27:17 ==> No such comm: b487a7b7-2cb3-4384-ba16-df236a6c54e8
+10/24/2024 08:27:17 ==> Current comms: []
+10/24/2024 02:02:36 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 02:02:36 ==> No such comm: 3630f377-d03d-4d9d-a23c-b304787370d2
+10/24/2024 02:02:36 ==> Current comms: []
+10/24/2024 04:42:43 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 04:42:43 ==> No such comm: bae17300-bb7f-4b99-a7dd-6807f28df5cf
+10/24/2024 04:42:43 ==> Current comms: []
+10/24/2024 09:00:32 ==> No such comm target registered: jupyter.widget.control
+10/24/2024 09:00:32 ==> No such comm: 79ed763e-fb11-49d8-b17c-7eb2484833c7
+10/24/2024 09:00:32 ==> Current comms: []
+10/25/2024 05:55:28 ==> No such comm target registered: jupyter.widget.control
+10/25/2024 05:55:28 ==> No such comm: 949a34c4-c745-4ac4-9c2d-2837c1c5770a
+10/25/2024 05:55:28 ==> Current comms: []
